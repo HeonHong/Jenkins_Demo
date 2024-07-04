@@ -1,9 +1,9 @@
 pipeline {
-    agent { docker { image 'gradle:8.8.0-jdk17-focal' } }
+    agent { docker { image 'maven:3.9.8-eclipse-temurin-21-alpine' } }
     stages {
         stage('build') {
             steps {
-                sh 'gradlew --version'
+                sh 'mvn --version'
             }
         }
     }
