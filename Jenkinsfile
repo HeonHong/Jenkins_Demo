@@ -1,5 +1,5 @@
 pipeline {
-    agent { docker { image 'gradle:8.8-jdk17-alpine' } }
+    agent { docker { image 'gradle:8.8.0-jdk17-focal' } }
     stages {
         stage('build') {
             steps {
