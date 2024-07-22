@@ -11,7 +11,7 @@ pipeline{
         stage('Build Docker Image'){
             steps{
                 echo 'build Image'
-                sh 'docker stop jenkins_demo'
+//                 sh 'docker stop jenkins_demo'
 //                 sh 'docker rm jenkins_demo'
                 sh 'docker build -t jenkins_demo .'
             }
@@ -25,6 +25,7 @@ pipeline{
     }//stages
 
 }//pipeline
+//문제점 : 만약에 빌드가 잘못됐을 경우, 도커가 이미 다운된 상태라서 복구가 안됨
 
 // pipeline {
 //     agent {
