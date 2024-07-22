@@ -11,7 +11,7 @@ pipeline{
         stage('Build Docker Image'){
             steps{
                 echo 'build Image'
-
+                sh 'docker stop jenkins_demo'
                 sh 'docker build -t jenkins_demo .'
             }
         }//build docker image
