@@ -17,7 +17,7 @@ pipeline{
         stage('Deploy Docker Container'){
             steps{
                 echo 'deploy'
-                sh 'docker run -d -p 8081:8081 jenkins_demo'
+                sh 'docker run --name jenkins_demo -d -p 8081:8081 jenkins_demo'
             }//steps
         }//Deploy Docker Container
     }//stages
