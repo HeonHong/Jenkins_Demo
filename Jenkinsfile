@@ -12,14 +12,14 @@ pipeline{
             steps{
                 echo 'build Image'
                 sh 'docker stop jenkins_demo'
-                sh 'docker rm jenkins_demo'
+//                 sh 'docker rm jenkins_demo'
                 sh 'docker build -t jenkins_demo .'
             }
         }//build docker image
         stage('Deploy Docker Container'){
             steps{
                 echo 'deploy'
-                sh 'docker run --name jenkins_demo -d -p 8081:8081 jenkins_demo'
+                sh 'docker run --rm --name jenkins_demo -d -p 8081:8081 jenkins_demo'
             }//steps
         }//Deploy Docker Container
     }//stages
