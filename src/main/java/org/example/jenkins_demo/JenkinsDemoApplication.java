@@ -14,6 +14,11 @@ public class JenkinsDemoApplication {
         return "Docker On";
     }
 
+    @RequestMapping("/again")
+    public String recheck() {
+        return "Docker Recheck";
+    }
+
     public static void main(String[] args) {
         SpringApplication.run(JenkinsDemoApplication.class, args);
     }
