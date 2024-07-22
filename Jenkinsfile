@@ -11,16 +11,12 @@ pipeline {
                 echo "new Dockerfile"
                 sh 'chmod +x gradlew'
                 sh './gradlew build'
-//                 sh 'java -jar build/libs/jenkins_demo-0.0.1-SNAPSHOT.jar'
-                sh 'groups'
-//                 sh 'groups jenkins'
-                sh 'getent group docker'
-                sh 'sudo useradd -m -s /bin/bash jenkins'
-                sh 'sudo usermod -aG docker jenkins'
-                sh 'getent group docker'
-                sh 'docker build -t jenkins_demo .'
-                sh 'docker run -p 8081:8081 jenkins_demo'
             }
-        }
+        }//build
+        stage('deploy'){
+            steps {
+                sh 'nohup java -jar build/libs/jenkins_demo-0.0.1-SNAPSHOT.jar > app.log 2>&1 &'
+            }
+        }//deploy
     }
 }
