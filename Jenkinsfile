@@ -2,6 +2,7 @@ pipeline {
     agent {
         docker {
             image 'gradle:8.8-jdk17-alpine'
+            args '-p 8081:8081'
         }
     }
     stages {
