@@ -7,7 +7,7 @@ pipeline {
     stages {
         stage('build') {
             steps {
-                echo "젠킨스 튜토리얼 빌드 테스트"
+                echo "new Dockerfile"
             }
         }
     }
