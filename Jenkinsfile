@@ -8,6 +8,7 @@ pipeline {
         stage('build') {
             steps {
                 echo "new Dockerfile"
+                sh 'chmod +x gradlewjava'
             }
         }
     }
