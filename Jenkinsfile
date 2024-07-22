@@ -13,7 +13,7 @@ pipeline {
                 sh './gradlew build'
 //                 sh 'java -jar build/libs/jenkins_demo-0.0.1-SNAPSHOT.jar'
                 sh 'groups'
-                sh 'groups jenkins'
+//                 sh 'groups jenkins'
                 sh 'getent group docker'
                 sh 'sudo useradd -m -s /bin/bash jenkins'
                 sh 'sudo usermod -aG docker jenkins'
