@@ -10,8 +10,9 @@ pipeline {
                 echo "new Dockerfile"
                 sh 'chmod +x gradlew'
                 sh './gradlew build'
-                sh 'docker build -t jenkins_demo .'
-                sh 'docker run -p 8081:8081 jenkins_demo'
+                sh 'java -jar build/libs/jenkins_demo-0.0.1-SNAPSHOT.jar'
+//                 sh 'docker build -t jenkins_demo .'
+//                 sh 'docker run -p 8081:8081 jenkins_demo'
             }
         }
     }
