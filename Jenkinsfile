@@ -12,6 +12,7 @@ pipeline{
             steps{
                 echo 'build Image'
                 sh 'sudo usermod -aG docker $USER'
+
                 sh 'docker stop jenkins_demo'
 //                 sh 'docker rm jenkins_demo'
                 sh 'docker build -t jenkins_demo .'
