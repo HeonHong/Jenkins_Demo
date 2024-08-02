@@ -26,12 +26,11 @@ pipeline{
 
 }//pipeline
 //문제점 : 만약에 빌드가 잘못됐을 경우, 도커가 이미 다운된 상태라서 복구가 안됨
-
 // pipeline {
 //     agent {
 //         docker {
 //             image 'gradle:8.8-jdk17-alpine'
-//             args '-p 8081:8081'
+//             args '-p 8082:8082'
 //         }
 //     }
 //     stages {
@@ -49,3 +48,4 @@ pipeline{
 //         }//deploy
 //     }
 // }
+//
