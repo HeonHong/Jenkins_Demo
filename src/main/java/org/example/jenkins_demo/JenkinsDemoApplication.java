@@ -11,7 +11,7 @@ public class JenkinsDemoApplication {
 
     @RequestMapping("/")
     public String home() {
-        return "Docker On";
+        return "Docker Changed by Webhook";
     }
 
     @RequestMapping("/again")
