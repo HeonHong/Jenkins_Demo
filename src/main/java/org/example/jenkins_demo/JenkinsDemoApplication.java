@@ -16,7 +16,7 @@ public class JenkinsDemoApplication {
 
     @RequestMapping("/again")
     public String recheck() {
-        return "Docker Testing";
+        return "Jenkins Testing";
     }
 
     public static void main(String[] args) {
