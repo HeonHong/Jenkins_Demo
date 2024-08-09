@@ -11,12 +11,12 @@ public class JenkinsDemoApplication {
 
     @RequestMapping("/")
     public String home() {
-        return "Docker On";
+        return "Docker Changed by Webhook";
     }
 
     @RequestMapping("/again")
     public String recheck() {
-        return "Docker check";
+        return "Docker Testing";
     }
 
     public static void main(String[] args) {
